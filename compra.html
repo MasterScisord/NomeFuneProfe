@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formulario</title>
+  <!-- Estilos de Bootstrap -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+  <style>
+    .bottom-text {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      background-color: #ccc;
+      padding: 20px;
+      text-align: center;
+      font-size: 18px;
+    }
+  </style>
+
+
+</head>
+
+
+
+
+<link rel="stylesheet" href="Style.css">
+
+
+<body>
+
+
+        <!-- Barra de navegación -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="inicio.html">V-Tech</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="inicio.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="hardware.html">Hardware</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="perifericos.html">Perifericos</a>
+                </li>
+                
+                <li class="nav-item">
+                  <a class="nav-link" href="servicio.html">Servicios</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contacto.html">Contacto</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="registro.html">Registrate</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="login.html">Iniciar Sesion</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+
+  <div class="container">
+    <div class="row justify-content-center mt-5">
+      <div class="col-lg-8">
+        
+        <form id="formulario" method="POST">
+          
+          <div class="form-group required">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" class="form-control">
+            <div class="invalid-feedback">Por favor, ingrese su nombre.</div>
+          </div>
+          
+          <div class="form-group required">
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" class="form-control">
+            <div class="invalid-feedback">Por favor, ingrese su apellido.</div>
+          </div>
+          
+          <div class="form-group required">
+            <label for="calle">Calle:</label>
+            <input type="text" id="calle" name="calle" class="form-control">
+            <div class="invalid-feedback">Por favor, ingrese su calle.</div>
+          </div>
+          
+          <div class="form-group required">
+            <label for="numero">Número:</label>
+            <input type="text" id="numero" name="numero" class="form-control">
+            <div class="invalid-feedback">Por favor, ingrese su número.</div>
+          </div>
+          
+          <label for="cboRegiones">Region:</label>
+        <select
+          name="cboRegiones"
+          id="cboRegiones"
+          class="form-select mb-3 col-md-4">
+          <option value="" disable hidden>Seleccione una opcion</option>
+        </select>
+        <br>
+        <label for="cboProvincias">Provincias:</label>
+        <select
+          name="cboProvincias"
+          id="cboProvincias"
+          class="form-select mb-3 col-md-4" disabled>
+          <option value="" disable hidden>Seleccione una opcion</option>
+        </select>
+        <br>
+        <label for="cboComunas">Comunas:</label>
+        <select
+          name="cboComunas"
+          id="cboComunas"
+          class="form-select mb-3 col-md-4" disabled>
+          <option value="" disable hidden>Seleccione una opcion</option>
+        </select>
+        
+
+          
+          <div class="form-group">
+            <label for="piso">Piso de Depto (opcional):</label>
+            <input type="text" id="piso" name="piso" class="form-control">
+          </div>
+          
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+        
+      </div>
+    </div>
+  </div>
+  
+  <!-- Scripts de Bootstrap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+
+  <script>
+    // Función para validar los campos
+    function validarCampos() {
+      let formulario = document.getElementById("formulario");
+      let nombre = document.getElementById("nombre");
+      let apellido = document.getElementById("apellido");
+      let calle = document.getElementById("calle");
+      let numero = document.getElementById("numero");
+      let region = document.getElementById("region");
+      let comuna = document.getElementById("comuna");
+
+      // Validar nombre
+      if (!nombre.value) {
+        nombre.classList.add("is-invalid");
+      } else {
+        nombre.classList.remove("is-invalid");
+      }
+
+      // Validar apellido
+      if (!apellido.value) {
+        apellido.classList.add("is-invalid");
+      } else {
+        apellido.classList.remove("is-invalid");
+      }
+
+      // Validar calle
+      if (!calle.value) {
+        calle.classList.add("is-invalid");
+      } else {
+        calle.classList.remove("is-invalid");
+      }
+
+      // Validar número
+      if (!numero.value) {
+        numero.classList.add("is-invalid");
+      } else {
+        numero.classList.remove("is-invalid");
+      }
+
+      // Validar región
+      if (!region.value) {
+        region.classList.add("is-invalid");
+      } else {
+        region.classList.remove("is-invalid");
+      }
+
+      // Validar comuna
+      if (!comuna.value) {
+        comuna.classList.add("is-invalid");
+      } else {
+        comuna.classList.remove("is-invalid");
+      }
+    }
+
+    // Función para enviar el formulario
+    function enviarFormulario(event) {
+      event.preventDefault();
+      validarCampos();
+      let formulario = document.getElementById("formulario");
+      let camposInvalidos = formulario.querySelectorAll(".is-invalid");
+      if (camposInvalidos.length === 0) {
+        formulario.submit();
+      }
+    }
+
+    // Añadir evento de submit al formulario
+    let formulario = document.getElementById("formulario");
+    formulario.addEventListener("submit", enviarFormulario);
+
+    // Añadir eventos de input a los campos para validarlos en tiempo real
+    let nombre = document.getElementById("nombre");
+    nombre.addEventListener("input", validarCampos);
+
+    let apellido = document.getElementById("apellido");
+    apellido.addEventListener("input", validarCampos);
+
+    let calle = document.getElementById("calle");
+    calle.addEventListener("input", validarCampos);
+
+    let numero = document.getElementById("numero");
+    numero.addEventListener("input", validarCampos);
+
+    let region = document.getElementById("region");
+    region.addEventListener("input", validarCampos);
+
+    let comuna = document.getElementById("comuna");
+    comuna.addEventListener("input", validarCampos);
+  </script>
+    <script crossorigin="anonymous" src="js/function.js"></script>
+
+
+    <div class="bottom-text" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2023 V-Tech. Todos los derechos reservados.
+  </div>
+
+
+</body>
+</html>

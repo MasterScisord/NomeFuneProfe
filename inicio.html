@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
+    <link rel="stylesheet" href="Style.css">
+    <style>
+      .bottom-text {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background-color: #ccc;
+        padding: 20px;
+        text-align: center;
+        font-size: 18px;
+      }
+    </style>
     <meta charset="UTF-8">
     <title></title>
     <!-- Enlazando Bootstrap -->
@@ -48,7 +62,7 @@
             <a class="nav-link" href="contacto.html">Contacto</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="login.html">Registrate</a>
+            <a class="nav-link" href="registro.html">Registrate</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="login.html">Iniciar Sesion</a>
@@ -81,27 +95,31 @@
           </div>
     </center>
           
-    <h2>Contacto</h2>
-    <form>
-      <div class="form-group">
-        <label for="nombre">Nombre</label>
-        <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
-      </div>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" class="form-control" id="email" placeholder="Ingrese su correo electrónico">
-      </div>
-      <div class="form-group">
-        <label for="mensaje">Mensaje</label>
-        <textarea class="form-control" id="mensaje" rows="3" placeholder="Ingrese su mensaje"></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary">Enviar</button>
-    </form>
-  </div>
-</div>
-</div>
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      © 2023 V-Tech. Todos los derechos reservados.
+    <center>
+      <h1>Contacto </h1>
+    </center>
+  
+          <form>
+            <div class="container">
+              <label for="nombre">Nombre</label>
+              <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
+            </div>
+            <div class="container">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Ingrese su correo electrónico">
+            </div>
+            <div class="container">
+              <label for="mensaje">Mensaje</label>
+              <textarea class="form-control" id="mensaje" rows="3" placeholder="Ingrese su mensaje"></textarea>
+            </div>
+            <br>
+            <div class="container">
+            <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+          </form>
+  
+<div class="bottom-text" style="background-color: rgba(0, 0, 0, 0.2);">
+  © 2023 V-Tech. Todos los derechos reservados.
   </div>
 
      <!--  -->

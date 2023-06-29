@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+{%load static%}
+
+<head>
+    <title>Confirmar eliminación</title>
+</head>
+<body>
+    <form method="POST" action="">
+        {% csrf_token %}
+        <p>¿Estás seguro de que quieres eliminar "{{ object.username }}"?</p>
+        <button type="submit">Sí, eliminar</button>
+    </form>
+    <a href="{% url 'app_name:cliente_list' %}">No, volver a la lista</a>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static%}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Editar Datos de Clientes</h1><br>
+    <br>
+
+    <button type="button">
+        <a href="{% url 'ClienteAdd' %}"> Agregar </a>
+    </button>
+
+    <div> id="idmensajes">
+        {% if mensaje %}
+            {{mensaje}}
+        {% endif %}    
+
+
+    </div>
+
+        <table>
+            {% if alumnos %}
+                <th>username</th>
+                <th>email</th>
+                {% for x in clientes %}
+                    <tr>
+                        <td> {{ x.username }}
+                        <td> {{ x.email }}
+                        <td> <a href = "{% url 'clientes/del' pk=x.username}">Eliminar</a>
+                        <td> <a href = "{% url 'clientes/finEdit' pk=x.username}">Modificar</a>
+                    </tr>
+                {% endfor %}
+            {% endif %}
+        </table>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <scipt>
+        $(document).ready(fuction(){
+            $("#idMensajes").delay(2000).fadeOut("slow");
+        });
+    </script>
+</body>
+</html>
+
+    

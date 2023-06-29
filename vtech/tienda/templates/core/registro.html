@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+  {%load static%}
   <head>
     <title>V-Tech - Inicio de sesión</title>
-    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="{% static 'Style.css' %}">
     <style>
         .bottom-text {
           position: fixed;
@@ -22,37 +23,37 @@
   <body>
      <!-- Barra de navegación -->
      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="inicio.html">V-Tech</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="inicio.html">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="hardware.html">Hardware</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="perifericos.html">Perifericos</a>
-            </li>
-            
-            <li class="nav-item">
-              <a class="nav-link" href="servicio.html">Servicios</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contacto.html">Contacto</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="registro.html">Registrate</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="login.html">Iniciar Sesion</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <a class="navbar-brand" href="{% url 'inicio' %}">V-Tech</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'inicio' %}">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'hardware' %}">Hardware</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'perifericos' %}">Perifericos</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'servicio' %}">Servicios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'contacto' %}">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'registro' %}">Registrate</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'login' %}">Iniciar Sesion</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
    
 
 
